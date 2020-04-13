@@ -6,9 +6,9 @@ To load custom stylesheets, install [EnhancedDiscord](https://github.com/joe27g/
 
 Only tested on Linux with EnhancedDiscord. Modifying Discord goes against their TOS so *use at your own risk*.
 
-## Bliss
+# Bliss
 
-Modern, Mac-like theme with support for both light and dark modes.
+Sleek, flat theme with support for both light and dark modes.
 
 ![Dark mode preview](bliss/preview-dark.png)
 
