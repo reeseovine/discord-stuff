@@ -14,4 +14,4 @@ Modern, Mac-like theme with support for both light and dark modes.
 
 ![Light mode preview](bliss/preview-light.png)
 
-[Download]()
+[Download](https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css)
