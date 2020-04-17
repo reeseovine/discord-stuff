@@ -61,6 +61,7 @@
 	--background-switcher: #181818;
 	--background-pinned: #181818;
 	--background-floating: #181818;
+	--background-floating-header: #111;
 	--background-emoji: #181818;
 	--deprecated-card-bg: #181818;
 	--background-profile-expand: #181818;
@@ -71,7 +72,7 @@
 	--text-normal: #ddd;
 	--text-muted: #888;
 	--channels-default: #999;
-	--interactive-muted: #777;
+	--interactive-muted: #9999;
 	--interactive-active: #eee;
 	--text-lights-out: #f0f0f0;
 }
@@ -112,6 +113,13 @@
 	background-color: var(--background-misc-bar);
 }
 
+.theme-dark .searchBar-6Kv8R2 .searchBarComponent-32dTOx {
+	background-color: transparent;
+}
+.theme-dark .searchBar-6Kv8R2 .searchBarComponent-32dTOx:hover {
+	background-color: #0006;
+}
+
 
 .theme-light {
 	/* background colors */
@@ -124,8 +132,8 @@
 	--background-logo: #fff;
 	--deprecated-card-bg: #f8f9f94c;
 	--deprecated-store-bg: #f8f9f900;
-	--background-search-bar: #e6e6e699;
-	--background-chatbox: #e6e6e699;
+	--background-search-bar: #ddd9;
+	--background-chatbox: #ddd9;
 	--deprecated-quickswitcher-input-background: #e6e6e699;
 	--background-misc-bar: #eee;
 	--background-modifier-selected: #fff;
@@ -133,6 +141,7 @@
 	--background-switcher: #f2f3f5ff;
 	--background-pinned: #f3f3f3;
 	--background-floating: #f3f3f3;
+	--background-floating-header: #fff;
 	--background-emoji: #f2f3f5ff;
 	--background-profile-expand: #f2f3f5ff;
 	--background-lights-out: #fff;
@@ -140,9 +149,9 @@
 
 	/* text colors */
 	--text-normal: #333;
-	--text-muted: #888;
-	--channels-default: #777;
-	--interactive-muted: #aaa;
+	--text-muted: #666;
+	--channels-default: #444;
+	--interactive-muted: #777;
 	--interactive-active: #000;
 	--text-lights-out: #202020;
 }
@@ -179,32 +188,10 @@
 }
 
 .theme-light .searchBar-6Kv8R2 .searchBarComponent-32dTOx {
-	background-color: #fff9;
-}
-
-
-.channelTextArea-rNsIhG {
 	background-color: transparent;
 }
-.chatContent-a9vAAp {
-	display: block !important;
-}
-.messagesWrapper-3lZDfY {
-	height: 100%;
-}
-.messages-3amgkR {
-	box-sizing: border-box;
-	padding-bottom: 68px;
-}
-.form-2fGMdU {
-	position: sticky;
-	bottom: 24px;
-}
-.scrollableContainer-2NUZem {
-	backdrop-filter: blur(20px);
-}
-.base-gE7OpD {
-	bottom: -23px;
+.theme-light .searchBar-6Kv8R2 .searchBarComponent-32dTOx:hover {
+	background-color: #fff6;
 }
 
 
@@ -227,7 +214,61 @@
 .perksModal-fSYqOq {
 	background-image: none;
 }
+.topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ {
+	background: transparent;
+}
+.option-96V44q:after {
+	background: none !important;
+}
+.row-rrHHJU.selected-1pIgLL {
+	background: var(--background-modifier-selected) !important;
+}
+.container-3ayLPN, .container-VSDcQc .sectionTag-pXyto9 {
+	background-color: var(--background-floating) !important;
+}
+.autocompleteArrow-Zxoy9H,.header-2bNvm4 {
+	background-color: var(--background-floating-header) !important;
+}
 
+/* Chat box - commented until i figure out what the HELL is going on with their overflow settings */
+/* .chatContent-a9vAAp {
+	height: 100%;
+	overflow-y: scroll;
+}
+.messagesWrapper-3lZDfY {
+	height: auto;
+	overflow-y: visible;
+}
+.scrollerWrap-2su1QI {
+	height: auto;
+	overflow-y: visible;
+}
+.scroller-2FKFPG {
+	height: auto;
+	overflow-y: visible;
+}
+.scrollerInner-2ircaP {
+	height: auto;
+	overflow-y: visible;
+}
+.scrollerSpacer-1Rp0XE {
+	/* height: calc(24px + 44px + 24px) !important; *
+}
+.form-2fGMdU {
+	position: unset;
+}
+.channelTextArea-rNsIhG {
+	background: transparent !important;
+	position: sticky;
+	bottom: 24px;
+}
+.channelTextArea-rNsIhG .scrollableContainer-2NUZem,
+.channelTextArea-rNsIhG .channelHeader-3Gd2xq {
+	backdrop-filter: blur(10px);
+}
+.typing-2GQL18 {
+	bottom: -23px !important;
+} */
 
 .withFrame-haYltI {
 	height: 18px;
@@ -373,9 +414,6 @@
 	box-shadow: none;
 }
 
-.searchBar-6Kv8R2 .searchBarComponent-32dTOx {
-	background-color: var(--background-search-bar);
-}
 
 .scroller-1JbKMe {
 	background-color: transparent;
@@ -403,10 +441,6 @@
 
 .embedFull-2tM8-- {
 	background-color: var(--background-attachments);
-}
-
-.messagesWrapper-3lZDfY {
-	margin-bottom: 8px;
 }
 
 .panels-j1Uci_ {
