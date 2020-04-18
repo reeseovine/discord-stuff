@@ -43,7 +43,7 @@
 
 .theme-dark{
 	/* background colors */
-	--background-primary: #000;
+	--background-primary: #0c0c0c;
 	--background-primary-alt: transparent;
 	--background-secondary: #000c;
 	--background-secondary-chat: transparent;
@@ -56,7 +56,7 @@
 	--background-chatbox: #333a;
 	--deprecated-quickswitcher-input-background: #333a;
 	--background-misc-bar: #303030;
-	--background-modifier-selected: #000;
+	--background-modifier-selected: rgba(255,255,255, 0.1);
 	--background-attachments: #181818;
 	--background-switcher: #181818;
 	--background-pinned: #181818;
@@ -123,7 +123,7 @@
 
 .theme-light {
 	/* background colors */
-	--background-primary: #fff;
+	--background-primary: #f4f4f4;
 	--background-primary-alt: transparent;
 	--background-secondary: #fffc;
 	--background-secondary-chat: transparent;
@@ -136,7 +136,7 @@
 	--background-chatbox: #ddd9;
 	--deprecated-quickswitcher-input-background: #e6e6e699;
 	--background-misc-bar: #eee;
-	--background-modifier-selected: #fff;
+	--background-modifier-selected: rgba(0,0,0, 0.1);
 	--background-attachments: #f6f6f640;
 	--background-switcher: #f2f3f5ff;
 	--background-pinned: #f3f3f3;
@@ -262,13 +262,16 @@
 	position: sticky;
 	bottom: 24px;
 }
-.channelTextArea-rNsIhG .scrollableContainer-2NUZem,
-.channelTextArea-rNsIhG .channelHeader-3Gd2xq {
+.channelTextArea-rNsIhG .scrollableContainer-2NUZem {
 	backdrop-filter: blur(10px);
 }
 .typing-2GQL18 {
 	bottom: -23px !important;
 } */
+
+.channelHeader-3Gd2xq {
+	backdrop-filter: blur(10px);
+}
 
 .withFrame-haYltI {
 	height: 18px;
