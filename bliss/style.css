@@ -32,9 +32,14 @@
 	--background-attachment: #181818;
 	--background-textbox: #282828;
 	
+	--background-titlebar: #000;
+	--background-scrollbar: #333;
+	
 	--background-channel-hover: rgba(255,255,255, 0.05);
 	--background-channel-active: rgba(255,255,255, 0.075);
 	--background-channel-selected: rgba(255,255,255, 0.1);
+	
+	--background-message-hover: rgba(255,255,255, 0.03);
 
 	/* text colors */
 	--text-normal: #ddd;
@@ -48,16 +53,21 @@
 	/* background colors */
 	--background-main: #fff;
 	--background-sidebar: #fffc;
-	--background-accent: #fff;
+	--background-accent: #333;
 	--background-round-btn: #eee;
-	--background-floating: #f6f6f6;
+	--background-floating: #fff;
 	--background-floating-header: #fff;
 	--background-attachment: #181818;
-	--background-textbox: #eee;
+	--background-textbox: #f3f3f3;
 	
-	--background-channel-hover: rgba(0,0,0, 0.05);
-	--background-channel-active: rgba(0,0,0, 0.075);
-	--background-channel-selected: rgba(0,0,0, 0.1);
+	--background-titlebar: #fff;
+	--background-scrollbar: #ccc;
+	
+	--background-channel-hover: rgba(0,0,0, 0.025);
+	--background-channel-active: rgba(0,0,0, 0.04);
+	--background-channel-selected: rgba(0,0,0, 0.05);
+
+	--background-message-hover: rgba(0,0,0, 0.02);
 
 	/* text colors */
 	--text-normal: #333;
@@ -87,12 +97,8 @@
 	--background-modifier-active: var(--background-channel-active);
 	--background-modifier-selected: var(--background-channel-selected);
 	--background-modifier-accent: transparent;
-	--background-message-hover: var(--background-channel-hover);
 	--elevation-stroke: transparent;
 	--elevation-low: none;
-	/* --elevation-medium: none;
-	--elevation-high: none;
-	--guild-header-text-shadow: none; */
 	--channeltextarea-background: var(--background-textbox);
 	--deprecated-quickswitcher-input-background: var(--background-textbox);
 	--deprecated-quickswitcher-input-placeholder: var(--text-faded);
@@ -114,8 +120,10 @@ body {
 
 /* floating dialogs */
 .contentWrapper-2txmjs,
-.messagesPopoutWrap-1MQ1bW {
+.messagesPopoutWrap-1MQ1bW,
+.emojiPicker-3PwZFl {
 	background-color: var(--background-floating) !important;
+	box-shadow: var(--elevation-high) !important;
 }
 
 /* Emoji autocomplete */
@@ -160,4 +168,28 @@ body {
 /* Server indicator */
 .iconBadge-2NuvG9.base-PmTxvP {
 	color: var(--text-normal);
+}
+
+/* Unread indicators */
+.unread-1xRYoj {
+	opacity: 1;
+}
+
+/* Windows titlebar */
+.titleBar-AC4pGV.typeWindows-1za-n7 {
+	background-color: var(--background-titlebar);
+	height: 23px;
+	margin: 0;
+}
+.titleBar-AC4pGV.typeWindows-1za-n7 .winButton-iRh8-Z {
+	top: 0;
+}
+
+/* Scrollbar */
+.scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece {
+	background-color: transparent !important;
+	border: none !important;
+}
+.scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
+	background-color: var(--background-scrollbar) !important;
 }
