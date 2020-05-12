@@ -1,479 +1,163 @@
 /**
  * @name Bliss theme
  * @description Discord theme dependent on Glasscord. A minimal flat theme with dark and light mode.
- * @author reeseovine
- * @version 0.1
+ * @author katacarbix
+ * @version 1.0
  */
-/*
-   Copyright 2020 reeseovine
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
 
 :root{
-	/* Here you can define properties for use with Glasscord. */
+	/* Properties for Glasscord */
 
-	/* Windows-specific properties */
+	/* Windows */
 	/* Blur mode. Available types: acrylic (strong blur), blurbehind (light blur), transparent */
-	--glasscord-win-blur: acrylic;
-	/* Acrylic mode makes some computers pretty unresponsive when resizing/moving the window.
-	   Should we work around it? */
-	--glasscord-win-performance-mode: true;
+	--glasscord-win-blur: blurbehind;
 
-	/* macOS-specific properties */
+	/* macOS */
 	/* Vibrancy mode */
 	--glasscord-macos-vibrancy: fullscreen-ui;
 
-	/* Linux-specific properties */
-	/* Should Glasscord send a request to your window compositor to blur behind Discord's window? */
-	/* It currently supports KWin only */
+	/* Linux */
+	/* Currently supports KWin only */
 	--glasscord-linux-blur: true;
 }
 
-
-.theme-dark{
+.theme-dark {
 	/* background colors */
-	--background-primary: #0c0c0c;
-	--background-primary-alt: transparent;
-	--background-secondary: #000c;
-	--background-secondary-chat: transparent;
-	--background-secondary-alt: transparent;
-	--background-tertiary: transparent;
-	--background-logo: #4c4c4c;
-	--deprecated-card-bg: #181818;
-	--deprecated-store-bg: #000;
-	--background-search-bar: #333a;
-	--background-chatbox: #333a;
-	--deprecated-quickswitcher-input-background: #333a;
-	--background-misc-bar: #303030;
-	--background-modifier-selected: rgba(255,255,255, 0.1);
-	--background-attachments: #181818;
-	--background-switcher: #181818;
-	--background-pinned: #181818;
+	--background-main: #111;
+	--background-sidebar: #000c;
+	--background-accent: #555;
+	--background-round-btn: #4c4c4c;
 	--background-floating: #181818;
-	--background-floating-header: #111;
-	--background-emoji: #181818;
-	--deprecated-card-bg: #181818;
-	--background-profile-expand: #181818;
-	--background-titlebar: #000;
-	--background-lights-out: #000;
+	--background-floating-header: #222;
+	--background-attachment: #181818;
+	--background-textbox: #282828;
+	
+	--background-channel-hover: rgba(255,255,255, 0.05);
+	--background-channel-active: rgba(255,255,255, 0.075);
+	--background-channel-selected: rgba(255,255,255, 0.1);
 
 	/* text colors */
 	--text-normal: #ddd;
-	--text-muted: #888;
-	--channels-default: #999;
-	--interactive-muted: #9999;
-	--interactive-active: #eee;
-	--text-lights-out: #f0f0f0;
+	--text-faded: #888;
+	--text-bright: #eee;
+	--channel-normal: #999;
+	--channel-muted: #9999;
+	--channel-selected: #ccc;
 }
-
-.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece {
-	background-color: transparent;
-	border: 4px solid transparent;
-}
-
-.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
-	background-color: #20222550;
-}
-
-.theme-dark .container-1D34oG {
-	background-color: #000;
-}
-
-.theme-dark .card-FDVird:before {
-	background-color: #33363c90;
-}
-
-.theme-dark .codeRedemptionRedirect-1wVR4b {
-	background-color: #2f313650;
-	border-color: #20222550;
-}
-
-.sidebarRegionScroller-3MXcoP, .layers-3iHuyZ>.layer-3QrUeG,
-	.standardSidebarView-3F1I7i {
-	background-color: transparent;
-}
-
-.theme-dark .sidebarRegion-VFTUkN {
-	background-color: var(--background-secondary);
-}
-
-.theme-dark .searchBox-3Y2Vi7,
-.css-1wqqa50-container {
-	background-color: var(--background-misc-bar);
-}
-
-.theme-dark .searchBar-6Kv8R2 .searchBarComponent-32dTOx {
-	background-color: transparent;
-}
-.theme-dark .searchBar-6Kv8R2 .searchBarComponent-32dTOx:hover {
-	background-color: #0006;
-}
-
-
 .theme-light {
 	/* background colors */
-	--background-primary: #f4f4f4;
-	--background-primary-alt: transparent;
-	--background-secondary: #fffc;
-	--background-secondary-chat: transparent;
-	--background-secondary-alt: transparent;
-	--background-tertiary: transparent;
-	--background-logo: #fff;
-	--deprecated-card-bg: #f8f9f94c;
-	--deprecated-store-bg: #f8f9f900;
-	--background-search-bar: #ddd9;
-	--background-chatbox: #ddd9;
-	--deprecated-quickswitcher-input-background: #e6e6e699;
-	--background-misc-bar: #eee;
-	--background-modifier-selected: rgba(0,0,0, 0.1);
-	--background-attachments: #f6f6f640;
-	--background-switcher: #f2f3f5ff;
-	--background-pinned: #f3f3f3;
-	--background-floating: #f3f3f3;
+	--background-main: #fff;
+	--background-sidebar: #fffc;
+	--background-accent: #fff;
+	--background-round-btn: #eee;
+	--background-floating: #f6f6f6;
 	--background-floating-header: #fff;
-	--background-emoji: #f2f3f5ff;
-	--background-profile-expand: #f2f3f5ff;
-	--background-lights-out: #fff;
-	--background-titlebar: #fff;
+	--background-attachment: #181818;
+	--background-textbox: #eee;
+	
+	--background-channel-hover: rgba(0,0,0, 0.05);
+	--background-channel-active: rgba(0,0,0, 0.075);
+	--background-channel-selected: rgba(0,0,0, 0.1);
 
 	/* text colors */
 	--text-normal: #333;
-	--text-muted: #666;
-	--channels-default: #444;
-	--interactive-muted: #777;
-	--interactive-active: #000;
-	--text-lights-out: #202020;
-}
-
-.theme-light .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece {
-	background-color: transparent;
-	border: 4px solid transparent;
-}
-
-.theme-light .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
-	border-color: transparent;
-	background-color: #e3e5e850;
-}
-
-.theme-light .container-1D34oG {
-	background-color: #fff;
-}
-
-.theme-light .card-FDVird:before {
-	background-color: #f6f6f790;
-}
-
-.theme-light .codeRedemptionRedirect-1wVR4b {
-	background-color: #f6f6f750;
-	border-color: #dcddde50;
-}
-
-.theme-light .pageWrapper-1PgVDX {
-	background-color: transparent;
-}
-
-.theme-light .sidebarRegion-VFTUkN {
-	background-color: var(--background-secondary);
-}
-
-.theme-light .searchBar-6Kv8R2 .searchBarComponent-32dTOx {
-	background-color: transparent;
-}
-.theme-light .searchBar-6Kv8R2 .searchBarComponent-32dTOx:hover {
-	background-color: #fff6;
+	--text-faded: #666;
+	--text-bright: #111;
+	--channel-normal: #333;
+	--channel-muted: #3339;
+	--channel-selected: #333;
 }
 
 
-.headerNormal-T_seeN,
-.bodyInner-245q0L,
-.autocomplete-1vrmpx,
-.modal-yWgWj-,
-.root-1gCeng,
-[class^='footer-'],
-[class*=' footer-'] {
-	background-color: var(--background-floating) !important;
+/* DON'T EDIT THESE UNLESS YOU KNOW WHAT YOU'RE DOIN! */
+:root {
+	--header-primary: var(--text-bright);
+	--header-secondary: var(--text-faded);
+	--text-muted: var(--text-faded);
+	--channels-default: var(--channel-normal);
+	--interactive-normal: var(--text-faded);
+	--interactive-hover: var(--channel-selected);
+	--interactive-active: var(--channel-selected);
+	--interactive-muted: var(--channel-muted);
+	--background-primary: var(--background-main);
+	--background-secondary: transparent;
+	--background-secondary-alt: transparent;
+	--background-tertiary: transparent;
+	--background-modifier-hover: var(--background-channel-hover);
+	--background-modifier-active: var(--background-channel-active);
+	--background-modifier-selected: var(--background-channel-selected);
+	--background-modifier-accent: transparent;
+	--background-message-hover: var(--background-channel-hover);
+	--elevation-stroke: transparent;
+	--elevation-low: none;
+	/* --elevation-medium: none;
+	--elevation-high: none;
+	--guild-header-text-shadow: none; */
+	--channeltextarea-background: var(--background-textbox);
+	--deprecated-quickswitcher-input-background: var(--background-textbox);
+	--deprecated-quickswitcher-input-placeholder: var(--text-faded);
+	--deprecated-text-input-bg: var(--background-textbox);
+	--deprecated-text-input-border: transparent;
+	--deprecated-text-input-border-hover: transparent;
+	--deprecated-text-input-border-disabled: transparent;
+	--deprecated-text-input-prefix: var(--text-normal);
 }
 
-.theme-dark .pageWrapper-1PgVDX,
-.theme-light .pageWrapper-1PgVDX,
-.perksModal-fSYqOq {
-	background-color: var(--background-primary);
+body {
+	background-color: var(--background-sidebar)
 }
 
-.perksModal-fSYqOq {
-	background-image: none;
-}
-.topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ {
-	background: transparent;
-}
-.option-96V44q:after {
-	background: none !important;
-}
-.row-rrHHJU.selected-1pIgLL {
-	background: var(--background-modifier-selected) !important;
-}
-.container-3ayLPN, .container-VSDcQc .sectionTag-pXyto9 {
-	background-color: var(--background-floating) !important;
-}
-.autocompleteArrow-Zxoy9H,.header-2bNvm4 {
-	background-color: var(--background-floating-header) !important;
+/* Friend list */
+.container-1D34oG {
+	background-color: var(--background-main) !important;
 }
 
-/* Chat box - commented until i figure out what the HELL is going on with their overflow settings */
-/* .chatContent-a9vAAp {
-	height: 100%;
-	overflow-y: scroll;
-}
-.messagesWrapper-3lZDfY {
-	height: auto;
-	overflow-y: visible;
-}
-.scrollerWrap-2su1QI {
-	height: auto;
-	overflow-y: visible;
-}
-.scroller-2FKFPG {
-	height: auto;
-	overflow-y: visible;
-}
-.scrollerInner-2ircaP {
-	height: auto;
-	overflow-y: visible;
-}
-.scrollerSpacer-1Rp0XE {
-	/* height: calc(24px + 44px + 24px) !important; *
-}
-.form-2fGMdU {
-	position: unset;
-}
-.channelTextArea-rNsIhG {
-	background: transparent !important;
-	position: sticky;
-	bottom: 24px;
-}
-.channelTextArea-rNsIhG .scrollableContainer-2NUZem {
-	backdrop-filter: blur(10px);
-}
-.typing-2GQL18 {
-	bottom: -23px !important;
-} */
-
-.channelHeader-3Gd2xq {
-	backdrop-filter: blur(10px);
-}
-
-.withFrame-haYltI {
-	height: 18px;
-	margin-top: 0;
-	padding-top: 4px;
-}
-
-.unread-3zKkbm {
-	height: 4px;
-	width: 4px;
-	margin-top: -2px;
-	border-radius: 2px 2px 2px 2px;
-}
-
-.jumpToPresentBar-9P20AM {
-	border-radius: 8px;
-	padding-bottom: 0;
-}
-
-.platform-win .sidebar-2K8pFh {
-	border-radius: 0;
-}
-
+/* floating dialogs */
+.contentWrapper-2txmjs,
 .messagesPopoutWrap-1MQ1bW {
-	background-color: var(--background-pinned);
+	background-color: var(--background-floating) !important;
 }
 
-.notice-2FJMB4 {
-	background-color: var(--background-secondary) !important;
-	border-radius: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
+/* Emoji autocomplete */
+.autocomplete-1vrmpx {
+	background-color: var(--background-floating) !important;
+}
+.selectorSelected-1_M1WV {
+	background-color: var(--background-channel-hover) !important;
+}
+.content-Qb0rXO {
+	color: var(--text-normal) !important;
+}
+.description-11DmNu,
+.descriptionUsername-J_75O8 {
+	color: var(--text-muted) !important;
 }
 
-.emojiPicker-3m1S-j {
-	background-color: var(--background-emoji);
-}
-
-.appMount-3lHmkl {
-	background-color: transparent;
-}
-
-.app-2rEoOp {
-	background-color: transparent;
-}
-
-.attachment-33OFj0 {
-	background-color: var(--background-attachments) !important;
-}
-
-.header-2o-2hj {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.privateChannels-1nO12o {
-	background-color: transparent;
-}
-
-.root-SR8cQa {
-	background-color: var(--background-profile-expand);
-}
-
-.container-PNkimc {
-	background-color: transparent;
-}
-
-.inset-3sAvek {
-	background-color: var(--background-secondary) !important;
-}
-
-.container-1r6BKw.themed-ANHk51 {
-	background-color: var(--background-secondary);
-}
-
-.wrapper-1Rf91z {
-	background-color: var(--background-secondary);
-}
-
-.childWrapper-anI2G9 {
-	background-color: var(--background-logo);
-}
-
-.circleIconButton-jET_ig {
-	background-color: var(--background-logo);
-}
-
+/* Search box */
 .searchBar-3dMhjb {
-	background-color: var(--background-search-bar);
+	background-color: var(--background-textbox);
 }
 
-.searchBar-6Kv8R2 {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.searchHeader-1l-wpR {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.channelName-1QajIf {
+/* Settings screen */
+.layer-3QrUeG,
+.sidebarRegionScroller-3MXcoP,
+.standardSidebarView-3F1I7i {
 	background-color: transparent;
 }
 
-.searchResult-3pzFAB:before {
-	background-image: none;
+/* Stream preview */
+.streamPreview-2-WUWT {
+	background-color: var(--background-floating) !important;
+}
+.watchButton-2SbJEo {
+	border-color: var(--text-normal) !important;
+	color: var(--text-normal) !important;
+}
+.previewContainer-12UlHl {
+	background-color: transparent !important;
 }
 
-.searchResult-3pzFAB:after {
-	background-image: none;
-}
-
-.ctaBar-2UsjF2 {
-	background-color: var(--background-attachments) !important;
-}
-
-.tierBody-16Chc9 {
-	background-color: var(--background-secondary-chat) !important;
-}
-
-.perk-2WeBWW {
-	background-color: var(--background-attachments) !important;
-}
-
-.content-yTz4x3:before {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.tabBody-3YRQ8W:before {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.container-19hC9u:before {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.container-xm7Ad0:before {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-
-.scroller-1JbKMe {
-	background-color: transparent;
-}
-
-.scroller-2TZvBN {
-	background-color: transparent;
-}
-
-.quickswitcher-3JagVE {
-	background-color: var(--background-switcher);
-}
-
-.wrapper-2aW0bm {
-	background-color: var(--background-primary-alt);
-}
-
-.searchResultMessage-2VxO12.hit-NLlWXA {
-	background-color: var(--background-primary-alt);
-}
-
-.scroller-zPkAnE {
-	background-color: transparent;
-}
-
-.embedFull-2tM8-- {
-	background-color: var(--background-attachments);
-}
-
-.panels-j1Uci_ {
-	background-color: transparent;
-}
-
-.titleBar-AC4pGV {
-	background-color: var(--background-titlebar);
-}
-
-.uploadArea-3QgLtW {
-	background-color: var(--background-lights-out);
-}
-
-.backdropWithLayer-3_uhz4 {
-	background-color: var(--background-lights-out) !important;
-}
-
-.backdrop-1wrmKB {
-	background-color: var(--background-lights-out) !important;
-}
-
-.downloadLink-1ywL9o {
-	color: var(--text-lights-out) !important;
-}
-
-.bg-AYqtMd {
-	-webkit-mask-image: linear-gradient(#000f, #0000) !important;
-}
-
-.scrollableContainer-2NUZem {
-	background-color: var(--background-chatbox);
+/* Server indicator */
+.iconBadge-2NuvG9.base-PmTxvP {
+	color: var(--text-normal);
 }
