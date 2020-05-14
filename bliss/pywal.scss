@@ -1,0 +1,23 @@
+@import './style';
+@import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path
+
+.theme-dark {
+	--background-main: #{$background};
+	--background-sidebar: #{rgba($background, 0.8)};
+	--background-accent: #{$color1};
+	--background-round-btn: #{$background};
+	--background-floating: #{darken($background, 5%)};
+	--background-floating-header: #{darken($background, 7%)};
+	--background-attachment: #{darken($background, 5%)};
+	--background-textbox: #{lighten($background, 5%)};
+}
+.theme-light {
+	--background-main: #{$background};
+	--background-sidebar: #{rgba($background, 0.8)};
+	--background-accent: #{$color1};
+	--background-round-btn: #{$background};
+	--background-floating: #{darken($background, 1%)};
+	--background-floating-header: #{darken($background, 3%)};
+	--background-attachment: #{darken($background, 5%)};
+	--background-textbox: #{darken($background, 5%)};
+}
