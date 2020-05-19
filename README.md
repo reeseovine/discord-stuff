@@ -8,12 +8,12 @@ Only tested on Linux with EnhancedDiscord. Modifying Discord goes against their 
 
 ## Bliss
 
-Sleek, flat theme with support for both light and dark modes.
+Sleek, flat theme with support for both light and dark modes. Colors can be modified in the `.theme-dark` and `.theme-light` sections.
 
-Colors can be modified in the `.theme-dark` and `.theme-light` sections.
+There is an optional SCSS file you can use to import colors from Pywal which you will need to compile yourself.
+
+[Download](https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/bliss.theme.css)
 
 ![Dark mode preview](bliss/preview-dark.png)
 
 ![Light mode preview](bliss/preview-light.png)
-
-[Download](https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/bliss.theme.css)

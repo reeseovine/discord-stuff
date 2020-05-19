@@ -1,16 +1,14 @@
 :root{
 	/* Properties for Glasscord */
-
+	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
+	
 	/* Windows */
-	/* Blur mode. Available types: acrylic (strong blur), blurbehind (light blur), transparent */
 	--glasscord-win-blur: blurbehind;
 
 	/* macOS */
-	/* Vibrancy mode */
 	--glasscord-macos-vibrancy: fullscreen-ui;
 
 	/* Linux */
-	/* Currently supports KWin only */
 	--glasscord-linux-blur: true;
 }
 

@@ -1,28 +1,26 @@
 /**
  * @name Bliss theme
- * @description Discord theme dependent on Glasscord. A minimal flat theme with dark and light mode.
+ * @description A minimal flat theme with dark and light mode. Supports Glasscord.
  * @author katacarbix
- * @version 1.0
+ * @version 1.1
  * @source https://github.com/katacarbix/discord-themes
 */
 
 @import url(https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css);
 
-/* Feel free to edit those colors if you wish to. They will overwrite the default ones. */
+/* Feel free to edit these values. They will overwrite the default ones. */
 
 :root{
 	/* Properties for Glasscord */
+	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
 
 	/* Windows */
-	/* Blur mode. Available types: acrylic (strong blur), blurbehind (light blur), transparent */
 	--glasscord-win-blur: blurbehind;
 
 	/* macOS */
-	/* Vibrancy mode */
 	--glasscord-macos-vibrancy: fullscreen-ui;
 
 	/* Linux */
-	/* Currently supports KWin only */
 	--glasscord-linux-blur: true;
 }
 

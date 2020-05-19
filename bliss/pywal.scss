@@ -1,5 +1,14 @@
-@import './style';
-@import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path
+@import url('https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css');
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css');
+@import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path on your system
+
+:root {
+	$accentcolor: $color1;
+	--accentcolor: #{red($accentcolor),green($accentcolor),blue($accentcolor)};
+	
+	$linkcolor: $color5;
+	--linkcolor: #{red($linkcolor),green($linkcolor),blue($linkcolor)};
+}
 
 .theme-dark {
 	--background-main: #{$background};
