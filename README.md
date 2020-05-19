@@ -16,4 +16,4 @@ Colors can be modified in the `.theme-dark` and `.theme-light` sections.
 
 ![Light mode preview](bliss/preview-light.png)
 
-[Download](https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css)
+[Download](https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/bliss.theme.css)
