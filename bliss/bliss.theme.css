@@ -5,8 +5,27 @@
  * @version 1.0
  * @source https://github.com/katacarbix/discord-themes
 */
-@import url("https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.csshttps://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.csshttps://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css");
+
+@import url(https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css);
+
 /* Feel free to edit those colors if you wish to. They will overwrite the default ones. */
+
+:root{
+	/* Properties for Glasscord */
+
+	/* Windows */
+	/* Blur mode. Available types: acrylic (strong blur), blurbehind (light blur), transparent */
+	--glasscord-win-blur: blurbehind;
+
+	/* macOS */
+	/* Vibrancy mode */
+	--glasscord-macos-vibrancy: fullscreen-ui;
+
+	/* Linux */
+	/* Currently supports KWin only */
+	--glasscord-linux-blur: true;
+}
+
 .theme-dark {
 	/* background colors */
 	--background-main: #111;
@@ -17,14 +36,14 @@
 	--background-floating-header: #222;
 	--background-attachment: #181818;
 	--background-textbox: #282828;
-	
+
 	--background-titlebar: #000;
 	--background-scrollbar: #333;
-	
+
 	--background-channel-hover: rgba(255,255,255, 0.05);
 	--background-channel-active: rgba(255,255,255, 0.075);
 	--background-channel-selected: rgba(255,255,255, 0.1);
-	
+
 	--background-message-hover: rgba(255,255,255, 0.03);
 
 	/* text colors */
@@ -45,10 +64,10 @@
 	--background-floating-header: #fff;
 	--background-attachment: #181818;
 	--background-textbox: #f3f3f3;
-	
+
 	--background-titlebar: #fff;
 	--background-scrollbar: #ccc;
-	
+
 	--background-channel-hover: rgba(0,0,0, 0.025);
 	--background-channel-active: rgba(0,0,0, 0.04);
 	--background-channel-selected: rgba(0,0,0, 0.05);
