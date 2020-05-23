@@ -6,77 +6,213 @@
  * @source https://github.com/katacarbix/discord-themes
 */
 
-@import url('https://raw.githubusercontent.com/katacarbix/discord-themes/master/bliss/style.css');
-
 /* Feel free to edit these values. They will overwrite the default ones. */
 
 :root{
-	/* Properties for Glasscord */
-	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
+    /* Properties for Glasscord */
+    /* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
+    
+    /* Windows */
+    --glasscord-win-blur: blurbehind;
 
-	/* Windows */
-	--glasscord-win-blur: blurbehind;
+    /* macOS */
+    --glasscord-macos-vibrancy: fullscreen-ui;
 
-	/* macOS */
-	--glasscord-macos-vibrancy: fullscreen-ui;
-
-	/* Linux */
-	--glasscord-linux-blur: true;
+    /* Linux */
+    --glasscord-linux-blur: true;
 }
 
 .theme-dark {
-	/* background colors */
-	--background-main: #111;
-	--background-sidebar: #000c;
-	--background-accent: #555;
-	--background-round-btn: #4c4c4c;
-	--background-floating: #181818;
-	--background-floating-header: #222;
-	--background-attachment: #181818;
-	--background-textbox: #282828;
+    /* background colors */
+    --background-main: #111;
+    --background-sidebar: #000c;
+    --background-accent: #555;
+    --background-round-btn: #4c4c4c;
+    --background-floating: #181818;
+    --background-floating-header: #222;
+    --background-attachment: #181818;
+    --background-textbox: #222;
+    
+    --background-titlebar: #000;
+    --background-scrollbar: rgba(255,255,255, 0.15);
+    
+    --background-channel-hover: rgba(255,255,255, 0.05);
+    --background-channel-active: rgba(255,255,255, 0.075);
+    --background-channel-selected: rgba(255,255,255, 0.1);
+    
+    --background-message-hover: rgba(255,255,255, 0.03);
 
-	--background-titlebar: #000;
-	--background-scrollbar: #333;
-
-	--background-channel-hover: rgba(255,255,255, 0.05);
-	--background-channel-active: rgba(255,255,255, 0.075);
-	--background-channel-selected: rgba(255,255,255, 0.1);
-
-	--background-message-hover: rgba(255,255,255, 0.03);
-
-	/* text colors */
-	--text-normal: #ddd;
-	--text-faded: #888;
-	--text-bright: #eee;
-	--channel-normal: #999;
-	--channel-muted: #9999;
-	--channel-selected: #ccc;
+    /* text colors */
+    --text-normal: #ddd;
+    --text-faded: #888;
+    --text-bright: #eee;
+    --channel-normal: #999;
+    --channel-muted: #9999;
+    --channel-selected: #ccc;
 }
 .theme-light {
-	/* background colors */
-	--background-main: #fff;
-	--background-sidebar: #fffc;
-	--background-accent: #333;
-	--background-round-btn: #eee;
-	--background-floating: #fff;
-	--background-floating-header: #fff;
-	--background-attachment: #181818;
-	--background-textbox: #f3f3f3;
+    /* background colors */
+    --background-main: #fff;
+    --background-sidebar: #fffc;
+    --background-accent: #333;
+    --background-round-btn: #eee;
+    --background-floating: #fff;
+    --background-floating-header: #fff;
+    --background-attachment: #181818;
+    --background-textbox: #f3f3f3;
+    
+    --background-titlebar: #fff;
+    --background-scrollbar: rgba(0,0,0, 0.1);
+    
+    --background-channel-hover: rgba(0,0,0, 0.025);
+    --background-channel-active: rgba(0,0,0, 0.04);
+    --background-channel-selected: rgba(0,0,0, 0.05);
 
-	--background-titlebar: #fff;
-	--background-scrollbar: #ccc;
+    --background-message-hover: rgba(0,0,0, 0.02);
 
-	--background-channel-hover: rgba(0,0,0, 0.025);
-	--background-channel-active: rgba(0,0,0, 0.04);
-	--background-channel-selected: rgba(0,0,0, 0.05);
+    /* text colors */
+    --text-normal: #0009;
+    --text-faded: #0008;
+    --text-bright: #000a;
+    --channel-normal: #000a;
+    --channel-muted: #0006;
+    --channel-selected: #000b;
+}
 
-	--background-message-hover: rgba(0,0,0, 0.02);
 
-	/* text colors */
-	--text-normal: #333;
-	--text-faded: #666;
-	--text-bright: #111;
-	--channel-normal: #333;
-	--channel-muted: #3339;
-	--channel-selected: #333;
+/* DON'T EDIT THESE UNLESS YOU KNOW WHAT YOU'RE DOIN! */
+:root {
+    --header-primary: var(--text-bright);
+    --header-secondary: var(--text-faded);
+    --text-muted: var(--text-faded);
+    --channels-default: var(--channel-normal);
+    --interactive-normal: var(--text-faded);
+    --interactive-hover: var(--channel-selected);
+    --interactive-active: var(--channel-selected);
+    --interactive-muted: var(--channel-muted);
+    --background-primary: var(--background-main);
+    --background-secondary: var(--background-sidebar);
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --background-modifier-hover: var(--background-channel-hover);
+    --background-modifier-active: var(--background-channel-active);
+    --background-modifier-selected: var(--background-channel-selected);
+    --background-modifier-accent: var(--background-textbox);
+    --elevation-stroke: transparent;
+    --elevation-low: none;
+    --channeltextarea-background: var(--background-textbox);
+    --deprecated-quickswitcher-input-background: var(--background-textbox);
+    --deprecated-quickswitcher-input-placeholder: var(--text-faded);
+    --deprecated-text-input-bg: var(--background-textbox);
+    --deprecated-text-input-border: transparent;
+    --deprecated-text-input-border-hover: transparent;
+    --deprecated-text-input-border-disabled: transparent;
+    --deprecated-text-input-prefix: var(--text-normal);
+}
+
+/* redundant sidebar bgs... */
+.sidebar-2K8pFh,
+.container-PNkimc {
+    background-color: transparent;
+}
+
+/* Friend list */
+.container-1D34oG {
+    background-color: var(--background-main) !important;
+}
+
+/* Floating dialogs and modals */
+.contentWrapper-2txmjs,
+.messagesPopoutWrap-1MQ1bW,
+.emojiPicker-3PwZFl,
+.root-1gCeng,
+.quickswitcher-3JagVE,
+.container-3ayLPN {
+    background-color: var(--background-floating) !important;
+    box-shadow: var(--elevation-high) !important;
+}
+.scroller-zPkAnE {
+    background-color: var(--background-floating) !important;
+}
+.footer-3rDWdC {
+    background-color: var(--background-floating-header) !important;
+}
+.option-96V44q:hover, .option-96V44q.selected-rZcOL- {
+    background-color: var(--background-channel-hover) !important;
+}
+.option-96V44q::after {
+    background: none !important;
+}
+
+/* Emoji autocomplete */
+.autocomplete-1vrmpx {
+    background-color: var(--background-floating) !important;
+}
+.selectorSelected-1_M1WV {
+    background-color: var(--background-channel-hover) !important;
+}
+.content-Qb0rXO {
+    color: var(--text-normal) !important;
+}
+.description-11DmNu,
+.descriptionUsername-J_75O8 {
+    color: var(--text-muted) !important;
+}
+
+/* Search box */
+.searchBar-3dMhjb {
+    background-color: var(--background-textbox);
+}
+
+/* Make chatbox r o u n d */
+.scrollableContainer-2NUZem {
+    border-radius: 22px;
+}
+
+/* Settings screen */
+.layer-3QrUeG,
+.sidebarRegionScroller-3MXcoP,
+.standardSidebarView-3F1I7i {
+    background-color: transparent;
+}
+
+/* Stream preview */
+.streamPreview-2-WUWT {
+    background-color: var(--background-floating) !important;
+}
+.watchButton-2SbJEo {
+    border-color: var(--text-normal) !important;
+    color: var(--text-normal) !important;
+}
+.previewContainer-12UlHl {
+    background-color: transparent !important;
+}
+
+/* Server indicator */
+.iconBadge-2NuvG9.base-PmTxvP {
+    color: var(--text-normal);
+}
+
+/* Unread indicators */
+.unread-1xRYoj {
+    opacity: 1;
+}
+
+/* Windows titlebar */
+.titleBar-AC4pGV.typeWindows-1za-n7 {
+    background-color: var(--background-titlebar);
+    height: 23px;
+    margin: 0;
+}
+.titleBar-AC4pGV.typeWindows-1za-n7 .winButton-iRh8-Z {
+    top: 0;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border: none !important;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--background-scrollbar) !important;
 }
