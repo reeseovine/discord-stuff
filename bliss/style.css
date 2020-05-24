@@ -1,3 +1,11 @@
+/**
+ * @name Bliss theme
+ * @description A minimal flat theme with dark and light mode. Supports Glasscord.
+ * @author katacarbix
+ * @version 1.2
+ * @source https://github.com/katacarbix/discord-themes
+*/
+
 :root{
 	/* Properties for Glasscord */
 	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
@@ -19,12 +27,12 @@
 	--background-accent: #555;
 	--background-round-btn: #4c4c4c;
 	--background-floating: #181818;
-	--background-floating-header: #222;
+	--background-floating-header: #161616;
 	--background-attachment: #181818;
-	--background-textbox: #222;
+	--background-textbox: #292929;
 	
 	--background-titlebar: #000;
-	--background-scrollbar: rgba(255,255,255, 0.15);
+	--background-scrollbar: #fff2;
 	
 	--background-channel-hover: rgba(255,255,255, 0.05);
 	--background-channel-active: rgba(255,255,255, 0.075);
@@ -52,7 +60,7 @@
 	--background-textbox: #f3f3f3;
 	
 	--background-titlebar: #fff;
-	--background-scrollbar: rgba(0,0,0, 0.1);
+	--background-scrollbar: #0001;
 	
 	--background-channel-hover: rgba(0,0,0, 0.025);
 	--background-channel-active: rgba(0,0,0, 0.04);
@@ -81,7 +89,7 @@
 	--interactive-active: var(--channel-selected);
 	--interactive-muted: var(--channel-muted);
 	--background-primary: var(--background-main);
-	--background-secondary: var(--background-sidebar);
+	--background-secondary: transparent;
 	--background-secondary-alt: transparent;
 	--background-tertiary: transparent;
 	--background-modifier-hover: var(--background-channel-hover);
@@ -98,6 +106,10 @@
 	--deprecated-text-input-border-hover: transparent;
 	--deprecated-text-input-border-disabled: transparent;
 	--deprecated-text-input-prefix: var(--text-normal);
+}
+
+body {
+	background-color: var(--background-sidebar);
 }
 
 /* redundant sidebar bgs... */
@@ -133,6 +145,10 @@
 .option-96V44q::after {
 	background: none !important;
 }
+.channelHeader-3Gd2xq {
+	background-color: var(--background-sidebar);
+	backdrop-filter: blur(10px);
+}
 
 /* Emoji autocomplete */
 .autocomplete-1vrmpx {
@@ -152,11 +168,6 @@
 /* Search box */
 .searchBar-3dMhjb {
 	background-color: var(--background-textbox);
-}
-
-/* Make chatbox r o u n d */
-.scrollableContainer-2NUZem {
-	border-radius: 22px;
 }
 
 /* Settings screen */
