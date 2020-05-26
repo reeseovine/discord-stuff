@@ -1,0 +1,74 @@
+/* Use this file if you want the theme to automatically update when a new version is posted. */
+
+@import url('https://katacarbix.xyz/discord-themes/bliss/theme.css');
+
+:root{
+	/* Properties for Glasscord */
+	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
+	
+	/* Windows */
+	--glasscord-win-blur: blurbehind;
+
+	/* macOS */
+	--glasscord-macos-vibrancy: fullscreen-ui;
+
+	/* Linux */
+	--glasscord-linux-blur: true;
+}
+
+.theme-dark {
+	/* background colors */
+	--background-main: #111;
+	--background-sidebar: #000c;
+	--background-accent: #555;
+	--background-round-btn: #4c4c4c;
+	--background-floating: #181818;
+	--background-floating-header: #161616;
+	--background-attachment: #181818;
+	--background-textbox: #292929;
+	
+	--background-titlebar: #000;
+	--background-scrollbar: #fff2;
+	
+	--background-channel-hover: rgba(255,255,255, 0.05);
+	--background-channel-active: rgba(255,255,255, 0.075);
+	--background-channel-selected: rgba(255,255,255, 0.1);
+	
+	--background-message-hover: rgba(255,255,255, 0.03);
+
+	/* text colors */
+	--text-normal: #ddd;
+	--text-faded: #888;
+	--text-bright: #eee;
+	--channel-normal: #999;
+	--channel-muted: #9999;
+	--channel-selected: #ccc;
+}
+.theme-light {
+	/* background colors */
+	--background-main: #fff;
+	--background-sidebar: #fffc;
+	--background-accent: #333;
+	--background-round-btn: #eee;
+	--background-floating: #fff;
+	--background-floating-header: #fff;
+	--background-attachment: #181818;
+	--background-textbox: #f3f3f3;
+	
+	--background-titlebar: #fff;
+	--background-scrollbar: #0001;
+	
+	--background-channel-hover: rgba(0,0,0, 0.025);
+	--background-channel-active: rgba(0,0,0, 0.04);
+	--background-channel-selected: rgba(0,0,0, 0.05);
+
+	--background-message-hover: rgba(0,0,0, 0.02);
+
+	/* text colors */
+	--text-normal: #0009;
+	--text-faded: #0008;
+	--text-bright: #000a;
+	--channel-normal: #000a;
+	--channel-muted: #0006;
+	--channel-selected: #000b;
+}
