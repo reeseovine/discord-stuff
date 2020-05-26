@@ -2,7 +2,7 @@
  * @name Bliss theme
  * @description A minimal flat theme with dark and light mode. Supports Glasscord.
  * @author katacarbix
- * @version 1.3
+ * @version 1.4
  * @source https://github.com/katacarbix/discord-themes
 */
 
@@ -121,8 +121,9 @@ body {
 	background-color: transparent;
 }
 
-/* Friend list */
-.container-1D34oG {
+/* Main areas */
+.container-1D34oG,
+.pageWrapper-1PgVDX {
 	background-color: var(--background-main) !important;
 }
 
@@ -135,12 +136,12 @@ body {
 .contentWrapper-2txmjs,
 .messagesPopoutWrap-1MQ1bW,
 .emojiPicker-3PwZFl,
-.root-1gCeng,
 .quickswitcher-3JagVE,
 .container-3ayLPN,
 .uploadModal-2ifh8j,
 .modal-yWgWj-,
-.bodyInner-245q0L, {
+.bodyInner-245q0L,
+.theme-dark .root-1gCeng {
 	background-color: var(--background-floating) !important;
 	box-shadow: var(--elevation-high) !important;
 }
