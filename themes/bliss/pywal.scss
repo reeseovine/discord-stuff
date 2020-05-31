@@ -12,6 +12,7 @@
 
 .theme-dark {
 	--background-main: #{$background};
+	--background-panels: #{darken($background, 3%)};
 	--background-sidebar: #{rgba($background, 0.8)};
 	--background-accent: #{$color1};
 	--background-round-btn: #{$background};
@@ -22,6 +23,7 @@
 }
 .theme-light {
 	--background-main: #{$background};
+	--background-panels: #{lighten($background, 5%)};
 	--background-sidebar: #{rgba($background, 0.8)};
 	--background-accent: #{$color1};
 	--background-round-btn: #{$background};

@@ -1,6 +1,14 @@
-/* Use this file if you want the theme to automatically update when a new version is posted. */
+/**
+ * @name Bliss
+ * @description A minimal flat theme with dark and light mode. Meant to be used with Glasscord.
+ * @author katacarbix
+ * @version 1.5
+ * @source https://github.com/katacarbix/discord-themes
+**/
 
-@import url('https://katacarbix.xyz/discord-stuff/themes/bliss/source.css');
+/* Use this file if you want the theme to automatically update when a new version is published. */
+
+@import url('https://katacarbix.gitlab.io/discord-stuff/themes/bliss/source.css');
 
 :root{
 	/* Properties for Glasscord */
@@ -18,7 +26,8 @@
 
 .theme-dark {
 	/* background colors */
-	--background-main: #111;
+	--background-main: #161616;
+	--background-panels: #111;
 	--background-sidebar: #000c;
 	--background-accent: #555;
 	--background-round-btn: #4c4c4c;
@@ -46,7 +55,8 @@
 }
 .theme-light {
 	/* background colors */
-	--background-main: #fff;
+	--background-main: #fafafa;
+	--background-panels: #fff;
 	--background-sidebar: #fffc;
 	--background-accent: #333;
 	--background-round-btn: #eee;
