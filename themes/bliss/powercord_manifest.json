@@ -1,0 +1,10 @@
+{
+    "name": "Bliss",
+    "description": "A minimal flat theme with a transparent sidebar and support for dark and light mode.",
+    "version": "1.7",
+    "author": "katacarbix",
+    "license": "Apache-2.0",
+    "theme": "bliss.theme.css",
+    "preview": [ "https://raw.githubusercontent.com/katacarbix/discord-stuff/master/themes/bliss/preview-dark.png", "https://raw.githubusercontent.com/katacarbix/discord-stuff/master/themes/bliss/preview-light.png" ],
+	"consent": [ "ext_listing" ]
+}
