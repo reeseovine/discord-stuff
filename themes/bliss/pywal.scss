@@ -1,9 +1,10 @@
-@import './source'; // requires libsass. ruby sass does NOT support plain css imports.
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css');
+@import './source'; // requires libsass -- ruby sass does NOT support plain css imports.
 @import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path on your system
 
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css');
+
 :root {
-	$accentcolor: $color1;
+	$accentcolor: $color6;
 	--accentcolor: #{red($accentcolor),green($accentcolor),blue($accentcolor)};
 	
 	$linkcolor: $color5;
@@ -22,13 +23,13 @@
 	--background-textbox: #{lighten($background, 5%)};
 }
 .theme-light {
-	--background-main: #{$background};
-	--background-panels: #{lighten($background, 5%)};
+	--background-main: #{lighten($background, 10%)};
+	--background-panels: #{$background};
 	--background-sidebar: #{rgba($background, 0.8)};
 	--background-accent: #{$color1};
-	--background-round-btn: #{$background};
-	--background-floating: #{darken($background, 1%)};
-	--background-floating-header: #{darken($background, 3%)};
-	--background-attachment: #{darken($background, 5%)};
-	--background-textbox: #{darken($background, 5%)};
+	--background-round-btn: #{darken($background, 5%)};
+	--background-floating: #{lighten($background, 10%)};
+	--background-floating-footer: #{$background};
+	--background-attachment: #{lighten($background, 10%)};
+	--background-textbox: #{darken($background, 2%)};
 }
