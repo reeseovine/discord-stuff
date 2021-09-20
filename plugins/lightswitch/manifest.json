@@ -1,0 +1,7 @@
+{
+	"name": "Lightswitch",
+	"version": "1.0.0",
+	"description": "Switch between light and dark mode from the console",
+	"author": "reese#1666",
+	"license": "MIT"
+}
