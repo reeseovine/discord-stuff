@@ -10,12 +10,20 @@ Only tested on Linux with Powercord. Modifying Discord goes against their TOS so
 
 ## Lightswitch
 
-A tiny plugin that allows you to set light and dark appearance from the Javascript console. Designed for use with my Pywal setup. I may add slash commands if there is interest.
+A tiny plugin that allows you to set light and dark appearance from chat and from the Javascript console.
 
-Usage: (open DevTools with `ctrl+shift+i` and switch to Console)  
+Chat command Usage:  
+```
+.lightswitch
+.lightswitch light
+.lightswitch dark
+```
+
+DevTools Usage: (open console with `ctrl+shift+i`)  
 ```js
-Lightswitch.set('light'); // AAAAAH MY EYES!!!
-Lightswitch.set('dark'); // much better 😎
+Lightswitch.set('light') // AAAAAH MY EYES!!!
+Lightswitch.set('dark') // much better 😎
+Lightswitch.toggle() // shorthand
 ```
 
 # Themes
