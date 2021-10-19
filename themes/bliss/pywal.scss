@@ -1,5 +1,5 @@
-@import './source'; // requires libsass -- ruby sass does NOT support plain css imports.
-@import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path on your system
+@import './source'; // ruby sass does NOT support plain css imports. use libsass or dart sass instead.
+@import '/home/reese/.cache/wal/colors.scss'; // change this to the correct path on your system.
 
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css');
 

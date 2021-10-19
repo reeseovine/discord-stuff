@@ -2,7 +2,7 @@
  * @name Bliss
  * @description A minimal flat theme with dark and light mode. Meant to be used with Glasscord.
  * @author katacarbix
- * @version 1.7
+ * @version 1.8
  * @source https://github.com/katacarbix/discord-stuff/themes/bliss/source.css
 **/
 
@@ -38,7 +38,7 @@
 	--background-textbox: #292929;
 	
 	--background-titlebar: #000;
-	--background-scrollbar: #fff2;
+	--scrollbar-thumb: rgba(255,255,255, 0.25);
 	
 	--background-channel-hover: rgba(255,255,255, 0.05);
 	--background-channel-active: rgba(255,255,255, 0.075);
@@ -67,7 +67,7 @@
 	--background-textbox: #f0f0f0;
 	
 	--background-titlebar: #fff;
-	--background-scrollbar: #0001;
+	--scrollbar-thumb: rgba(0,0,0, 0.25);
 	
 	--background-channel-hover: rgba(0,0,0, 0.025);
 	--background-channel-active: rgba(0,0,0, 0.04);

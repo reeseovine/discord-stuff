@@ -1,21 +1,17 @@
 /**
  * @name Bliss
- * @description A minimal flat theme with dark and light mode. Meant to be used with Glasscord.
+ * @description A minimal flat theme with dark and light mode and transparency (client must be modded to support it).
  * @author katacarbix
- * @version 1.7
+ * @version 1.8
  * @source https://github.com/katacarbix/discord-stuff/themes/bliss/source.css
 **/
 
 :root {
-	/* Properties for Glasscord */
-	/* See here for a full list of values: https://github.com/AryToNeX/Glasscord#hey-buddy-i-am-a-theme-creator-how-should-i-support-glasscord-in-my-own-themes */
-	
+	/* Glasscord is deprecated but I'm leaving these here anyway */
 	/* Windows */
 	--glasscord-win-blur: blurbehind;
-
 	/* macOS */
 	--glasscord-macos-vibrancy: fullscreen-ui;
-
 	/* Linux */
 	--glasscord-linux-blur: true;
 	--glasscord-gnome-sigma: 111;
@@ -34,7 +30,7 @@
 	--background-textbox: #292929;
 	
 	--background-titlebar: #000;
-	--background-scrollbar: #fff2;
+	--scrollbar-thumb: rgba(255,255,255, 0.25);
 	
 	--background-channel-hover: rgba(255,255,255, 0.05);
 	--background-channel-active: rgba(255,255,255, 0.075);
@@ -63,7 +59,7 @@
 	--background-textbox: #f0f0f0;
 	
 	--background-titlebar: #fff;
-	--background-scrollbar: #0001;
+	--scrollbar-thumb: rgba(0,0,0, 0.25);
 	
 	--background-channel-hover: rgba(0,0,0, 0.025);
 	--background-channel-active: rgba(0,0,0, 0.04);
@@ -110,6 +106,12 @@
 	--deprecated-text-input-border-hover: transparent;
 	--deprecated-text-input-border-disabled: transparent;
 	--deprecated-text-input-prefix: var(--text-normal);
+	--scrollbar-thin-thumb: var(--scrollbar-thumb);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--scrollbar-thumb);
+    --scrollbar-auto-track: transparent;
+    --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-thumb);
+    --scrollbar-auto-scrollbar-color-track: transparent;
 }
 
 body {
@@ -150,6 +152,7 @@ body {
 .cardPrimary-1Hv-to,
 .embedFull-2tM8-- {
 	background-color: var(--background-attachment);
+	box-shadow: var(--elevation-medium) !important;
 }
 
 /* Floating dialogs and modals */
@@ -166,7 +169,9 @@ body {
 .body-3iLsc4,
 .root-SR8cQa,
 .container-ZRw2kD,
-.wrapper-1rqM3x {
+.wrapper-1rqM3x,
+.container-enaOkj,
+.container-7uh5fX {
 	background-color: var(--background-floating) !important;
 	box-shadow: var(--elevation-high) !important;
 	border-radius: 4px !important;
@@ -176,7 +181,8 @@ body {
 }
 .footer-3rDWdC,
 .footer-3mqk7D,
-.footer-1fjuF6 {
+.footer-1fjuF6,
+.footer-2gL1pp {
 	background-color: var(--background-floating-footer) !important;
 }
 /* Search list */
@@ -230,6 +236,25 @@ body {
 	background-color: transparent !important;
 }
 
+/* Stream Video/Screen buttons */
+.button-1YfofB.buttonColor-7qQbGO,
+.button-1YfofB .buttonColor-7qQbGO {
+	box-shadow: var(--elevation-low);
+	transition: box-shadow .2s, background-color .1s, color .1s;
+}
+.button-1YfofB.buttonColor-7qQbGO:hover,
+.button-1YfofB .buttonColor-7qQbGO:hover {
+	background-color: var(--background-primary);
+	box-shadow: var(--elevation-medium);
+}
+.button-1YfofB.buttonColor-7qQbGO:active,
+.button-1YfofB .buttonColor-7qQbGO:active {
+	box-shadow: var(--elevation-low);
+	color: #fff;
+	background-color: var(--brand-experiment);
+}
+
+
 /* Server indicator */
 .iconBadge-2NuvG9.base-PmTxvP {
 	color: var(--text-normal);
@@ -250,11 +275,14 @@ body {
 	top: 0;
 }
 
-/* Scrollbar */
-*::-webkit-scrollbar-track-piece {
-	background-color: transparent !important;
-	border: none !important;
+/* Activity list (home) */
+.outer-1AjyKL.interactive-3B9GmY:hover {
+	background-color: var(--background-message-hover) !important;
 }
-*::-webkit-scrollbar-thumb {
-	background-color: var(--background-scrollbar) !important;
+.body-1ld4H7 {
+	box-shadow: var(--elevation-medium) !important;
+	background-color: transparent !important;
+}
+.section-2gLsgF {
+	background-color: var(--background-floating) !important;
 }
