@@ -1,7 +1,7 @@
 {
     "name": "Bliss",
     "description": "A minimal flat theme with a transparent sidebar and support for dark and light mode.",
-    "version": "1.8",
+    "version": "1.9",
     "author": "katacarbix",
     "license": "MIT",
     "theme": "bliss.theme.css",

@@ -2,7 +2,7 @@
  * @name Bliss
  * @description A minimal flat theme with dark and light mode and transparency (client must be modded to support it).
  * @author katacarbix
- * @version 1.8
+ * @version 1.9
  * @source https://github.com/katacarbix/discord-stuff/themes/bliss/source.css
 **/
 
@@ -129,9 +129,17 @@ body {
 	background-color: transparent;
 }
 
+/* channel hover/selected */
+.modeSelected-346R90 .content-1x5b-n,
+.modeSelected-346R90:hover .content-1x5b-n,
+.wrapper-2jXpOf:hover .content-1x5b-n {
+	transition: background-color .15s, color .15s;
+}
+
 /* Main areas */
 .container-1D34oG,
-.pageWrapper-1PgVDX {
+.pageWrapper-1PgVDX,
+.tabBody-2dgbAs {
 	background-color: var(--background-main) !important;
 }
 
@@ -158,6 +166,7 @@ body {
 /* Floating dialogs and modals */
 .contentWrapper-2txmjs,
 .contentWrapper-SvZHNd,
+.contentWrapper-3vHNP2,
 .container-3ayLPN,
 .messagesPopoutWrap-1MQ1bW,
 .quickswitcher-3JagVE,
@@ -168,10 +177,14 @@ body {
 .headerNormal-T_seeN,
 .body-3iLsc4,
 .root-SR8cQa,
-.container-ZRw2kD,
+.root-g14mjS,
 .wrapper-1rqM3x,
+.container-ZRw2kD,
 .container-enaOkj,
-.container-7uh5fX {
+.container-7uh5fX,
+.container-2ebMPP,
+.browser-mnQ1T7,
+.messagesPopoutWrap-3zryHW {
 	background-color: var(--background-floating) !important;
 	box-shadow: var(--elevation-high) !important;
 	border-radius: 4px !important;
@@ -182,7 +195,8 @@ body {
 .footer-3rDWdC,
 .footer-3mqk7D,
 .footer-1fjuF6,
-.footer-2gL1pp {
+.footer-2gL1pp,
+.footer-31IekZ {
 	background-color: var(--background-floating-footer) !important;
 }
 /* Search list */
